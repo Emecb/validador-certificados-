@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Validador de Certificados</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
+    <title>Validador Documental</title>
 
-.card{
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
-    width:400px;
-    text-align:center;
-}
-
-h1{
-    margin-bottom:25px;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    box-sizing:border-box;
-    font-size:16px;
-}
-
-button{
-    margin-top:15px;
-    padding:12px 20px;
-    cursor:pointer;
-    background:#0d6efd;
-    color:white;
-    border:none;
-    border-radius:5px;
-}
-
-button:hover{
-    background:#0b5ed7;
-}
-
-</style>
-
-</head>
+    <link rel="</head>
 
 <body>
 
-<div class="card">
+    <div class="card">
 
-    <h1>Validación de Certificados</h1>
+        <h1>Validador Documental</h1>
 
-    <input
-        id="codigo"
-        type="text"
-        placeholder="INS-2026-00001">
+        <p>
+            Verificación de certificados
+        </p>
 
-    <button onclick="consultar()">
-        Consultar
-    </button>
+        <input
+            id="codigo"
+            type="text"
+            placeholder="INS-2026-00001">
 
-</div>
+        <button onclick="consultar()">
+            Consultar
+        </button>
 
-<script>
+        <button onclick="limpiar()">
+            Limpiar
+        </button>
 
-function consultar(){
+    </div>
 
-    var codigo =
-        document.getElementById("codigo").value;
+    app.jsscript>
 
-    if(codigo === ""){
-        alert("Ingrese un código");
-        return;
-    }
+    <script>
 
-    window.location.href =
-        "https://script.google.com/macros/s/AKfycbx0MHCnOg5K2ibmPLLcVAsMQiED45BdN-U7z7CF6TPreLIEIWbkgUwERCvoUElSAT57/exec?id="
-        + encodeURIComponent(codigo);
+        function consultar(){
 
-}
+            var codigo =
+                document.getElementById("codigo").value;
 
-</script>
+            if(codigo === ""){
+
+                alert("Ingrese un código");
+
+                return;
+
+            }
+
+            window.location.href =
+                "https://script.google.com/macros/s/AKfycbx0MHCnOg5K2ibmPLLcVAsMQiED45BdN-U7z7CF6TPreLIEIWbkgUwERCvoUElSAT57/exec?id="
+                + encodeURIComponent(codigo);
+
+        }
+
+    </script>
 
 </body>
+
 </html>
