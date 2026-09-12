@@ -32,24 +32,27 @@
 
     </div>
 
-
     <script>
+
+        function limpiar() {
+
+            document.getElementById("codigo").value = "";
+            document.getElementById("codigo").focus();
+
+        }
 
         function consultar() {
 
-            var codigo = document.getElementById("codigo").value;
+            const codigo = document.getElementById("codigo").value.trim();
 
-            if (codigo === "") {
-
+            if (!codigo) {
                 alert("Ingrese un código");
                 return;
-
             }
 
             window.location.href =
                 "https://script.google.com/macros/s/AKfycbx0MHCnOg5K2ibmPLLcVAsMQiED45BdN-U7z7CF6TPreLIEIWbkgUwERCvoUElSAT57/exec?id="
                 + encodeURIComponent(codigo);
-
         }
 
     </script>
